@@ -1,0 +1,1308 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>磷霉素原料药行业深度研究报告</title>
+    <script src="https://gen.wenxiaobai.com/cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://gen.wenxiaobai.com/cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://gen.wenxiaobai.com/fonts.googleapis.com">
+    <link rel="preconnect" href="https://gen.wenxiaobai.com/fonts.gstatic.com" crossorigin>
+    <link href="https://gen.wenxiaobai.com/fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://gen.wenxiaobai.com/cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://gen.wenxiaobai.com/cdnjs.cloudflare.com/ajax/libs/countup.js/2.0.7/countUp.min.js"></script>
+    <script src="https://gen.wenxiaobai.com/cdn.jsdelivr.net/npm/apexcharts"></script>
+    <style>
+        :root {
+            --primary: #0c4a6e;
+            --secondary: #0ea5e9;
+            --accent: #38bdf8;
+            --light: #e0f2fe;
+            --dark: #0c4a6e;
+            --text: #1e293b;
+            --text-light: #64748b;
+            --background: #f8fafc;
+            --card-bg: rgba(255, 255, 255, 0.9);
+            --gradient-start: #0ea5e9;
+            --gradient-end: #4338ca;
+        }
+        
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            color: var(--text);
+            background-color: var(--background);
+            overflow-x: hidden;
+        }
+        
+        .glass-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .glass-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .stats-card {
+            transition: transform 0.3s ease;
+        }
+        
+        .stats-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .nav-link {
+            position: relative;
+            white-space: nowrap;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            box-shadow: 0 5px 15px rgba(14, 165, 233, 0.4);
+            transform: translateY(-2px);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 1px solid var(--accent);
+            color: var(--primary);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-outline:hover {
+            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        .animate-fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        
+        .animate-fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .chart-container {
+            position: relative;
+            height: 300px;
+            width: 100%;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <!-- 导航栏 -->
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-white/90 shadow-sm">
+        <nav class="container mx-auto px-4 py-4 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-microscope text-2xl text-sky-600"></i>
+                <h1 class="text-xl font-bold">磷霉素原料药行业研究</h1>
+            </div>
+            
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#market-overview" class="nav-link text-gray-700 hover:text-sky-600 font-medium">市场概况</a>
+                <a href="#china-production" class="nav-link text-gray-700 hover:text-sky-600 font-medium">中国生产情况</a>
+                <a href="#manufacturers" class="nav-link text-gray-700 hover:text-sky-600 font-medium">厂商分析</a>
+                <a href="#risk-strategies" class="nav-link text-gray-700 hover:text-sky-600 font-medium">风险应对</a>
+                <a href="#market-expansion" class="nav-link text-gray-700 hover:text-sky-600 font-medium">市场扩展</a>
+            </div>
+            
+            <div class="md:hidden">
+                <button id="mobile-menu-btn" class="text-gray-700 focus:outline-none">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </nav>
+        
+        <!-- 移动端菜单 -->
+        <div id="mobile-menu" class="hidden px-4 py-2 bg-white shadow-md md:hidden">
+            <a href="#market-overview" class="block py-2 text-gray-700 hover:text-sky-600">市场概况</a>
+            <a href="#china-production" class="block py-2 text-gray-700 hover:text-sky-600">中国生产情况</a>
+            <a href="#manufacturers" class="block py-2 text-gray-700 hover:text-sky-600">厂商分析</a>
+            <a href="#risk-strategies" class="block py-2 text-gray-700 hover:text-sky-600">风险应对</a>
+            <a href="#market-expansion" class="block py-2 text-gray-700 hover:text-sky-600">市场扩展</a>
+        </div>
+    </header>
+
+    <!-- 英雄区块 -->
+    <section class="relative pt-16 pb-24 overflow-hidden">
+        <div class="absolute inset-0 z-0 opacity-10">
+            <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-200 to-indigo-100"></div>
+            <div class="absolute -top-40 -right-40 w-80 h-80 bg-sky-300 rounded-full filter blur-3xl opacity-30"></div>
+            <div class="absolute -bottom-40 -left-40 w-80 h-80 bg-indigo-300 rounded-full filter blur-3xl opacity-30"></div>
+        </div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="w-full md:w-1/2 mb-12 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+                        磷霉素原料药行业 <span class="gradient-text">深度研究报告</span>
+                    </h1>
+                    <p class="text-lg text-gray-600 mb-8">
+                        全面剖析磷霉素原料药行业的市场格局、竞争态势与风险应对策略，为行业参与者提供战略洞察。
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#market-overview" class="btn-primary px-6 py-3 rounded-lg font-medium flex items-center gap-2">
+                            <i class="fas fa-chart-line"></i>
+                            市场概况
+                        </a>
+                        <a href="#manufacturers" class="btn-outline px-6 py-3 rounded-lg font-medium flex items-center gap-2">
+                            <i class="fas fa-industry"></i>
+                            厂商分析
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="w-full md:w-5/12">
+                    <div class="glass-card p-6 md:p-8">
+                        <h3 class="text-xl font-semibold mb-6">磷霉素行业核心指标</h3>
+                        
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="stats-card bg-gradient-to-br from-sky-50 to-blue-50 p-4 rounded-xl border border-sky-100">
+                                <p class="text-sky-700 text-sm">亚太地区市场份额</p>
+                                <h4 class="text-2xl font-bold text-sky-800 mt-1" id="apac-share">62.39%</h4>
+                            </div>
+                            
+                            <div class="stats-card bg-gradient-to-br from-indigo-50 to-purple-50 p-4 rounded-xl border border-indigo-100">
+                                <p class="text-indigo-700 text-sm">龙头企业市占率</p>
+                                <h4 class="text-2xl font-bold text-indigo-800 mt-1" id="leader-market-share">70%+</h4>
+                            </div>
+                            
+                            <div class="stats-card bg-gradient-to-br from-emerald-50 to-teal-50 p-4 rounded-xl border border-emerald-100">
+                                <p class="text-emerald-700 text-sm">主要生产企业数</p>
+                                <h4 class="text-2xl font-bold text-emerald-800 mt-1" id="producer-count">≤5家</h4>
+                            </div>
+                            
+                            <div class="stats-card bg-gradient-to-br from-amber-50 to-orange-50 p-4 rounded-xl border border-amber-100">
+                                <p class="text-amber-700 text-sm">上游供应商数</p>
+                                <h4 class="text-2xl font-bold text-amber-800 mt-1" id="supplier-count">2家</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 市场概况 -->
+    <section id="market-overview" class="py-20 bg-gradient-to-b from-sky-50 to-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 animate-fade-in">
+                <h2 class="text-3xl font-bold mb-4">磷霉素原料药市场概况</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-sky-400 to-blue-600 mx-auto"></div>
+                <p class="text-gray-600 mt-4 max-w-3xl mx-auto">
+                    磷霉素作为一种广谱抗生素，以其独特的抗菌机制和临床应用价值，在全球抗生素市场中占据重要地位
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+                <div class="glass-card p-6 md:p-8 animate-fade-in">
+                    <div class="flex items-start mb-6">
+                        <div class="w-12 h-12 flex items-center justify-center rounded-full bg-sky-100 text-sky-600 mr-4">
+                            <i class="fas fa-globe-asia text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">全球市场规模与增长趋势</h3>
+                            <p class="text-gray-600">
+                                亚太地区是磷霉素最大的市场，2022年度市场份额高达62.39%。北美和欧洲市场分别位居第二、三位，德国在欧洲市场中占据领先地位。
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="chart-container">
+                        <canvas id="marketShareChart"></canvas>
+                    </div>
+                </div>
+                
+                <div class="glass-card p-6 md:p-8 animate-fade-in">
+                    <div class="flex items-start mb-6">
+                        <div class="w-12 h-12 flex items-center justify-center rounded-full bg-indigo-100 text-indigo-600 mr-4">
+                            <i class="fas fa-pills text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">产品类型与应用领域</h3>
+                            <p class="text-gray-600">
+                                磷霉素主要有四种剂型：磷霉素钠（静脉注射用）、磷霉素钙（口服制剂）、磷霉素氨丁三醇（口服制剂）和磷霉素左磷右胺盐（原料药）。
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="chart-container">
+                        <canvas id="productTypeChart"></canvas>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="glass-card p-6 md:p-8 animate-fade-in">
+                <div class="flex items-start mb-6">
+                    <div class="w-12 h-12 flex items-center justify-center rounded-full bg-amber-100 text-amber-600 mr-4">
+                        <i class="fas fa-industry text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">上下游产业链分析</h3>
+                        <p class="text-gray-600">
+                            磷霉素产业链结构清晰但高度集中，上游原材料供应和下游市场需求均具有鲜明特点，共同构成了磷霉素行业的产业生态。
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl p-6 shadow-sm">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="text-center p-4 border border-amber-100 rounded-lg bg-amber-50">
+                            <div class="w-16 h-16 mx-auto mb-3 flex items-center justify-center rounded-full bg-amber-100 text-amber-600">
+                                <i class="fas fa-flask text-2xl"></i>
+                            </div>
+                            <h4 class="text-lg font-semibold text-amber-800 mb-2">上游原料</h4>
+                            <p class="text-gray-600 text-sm">左磷右胺盐仅有两家厂商生产，供应链高度集中，上游议价能力强</p>
+                        </div>
+                        
+                        <div class="text-center p-4 border border-sky-100 rounded-lg bg-sky-50">
+                            <div class="w-16 h-16 mx-auto mb-3 flex items-center justify-center rounded-full bg-sky-100 text-sky-600">
+                                <i class="fas fa-industry text-2xl"></i>
+                            </div>
+                            <h4 class="text-lg font-semibold text-sky-800 mb-2">中游加工</h4>
+                            <p class="text-gray-600 text-sm">具备生产能力的企业不超过5家，行业集中度高，技术壁垒明显</p>
+                        </div>
+                        
+                        <div class="text-center p-4 border border-green-100 rounded-lg bg-green-50">
+                            <div class="w-16 h-16 mx-auto mb-3 flex items-center justify-center rounded-full bg-green-100 text-green-600">
+                                <i class="fas fa-hospital-user text-2xl"></i>
+                            </div>
+                            <h4 class="text-lg font-semibold text-green-800 mb-2">下游应用</h4>
+                            <p class="text-gray-600 text-sm">人用药（约旦、叙利亚等）和兽药（阿根廷、墨西哥等）两大应用领域</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 磷霉素在中国的生产情况 -->
+    <section id="china-production" class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 animate-fade-in">
+                <h2 class="text-3xl font-bold mb-4">磷霉素在中国的生产情况</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-sky-400 to-blue-600 mx-auto"></div>
+                <p class="text-gray-600 mt-4 max-w-3xl mx-auto">
+                    中国作为全球抗生素生产和消费大国，其磷霉素产业经历了从快速发展到逐步规范的过程
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+                <div class="glass-card p-6 md:p-8 animate-fade-in">
+                    <div class="flex items-start mb-6">
+                        <div class="w-12 h-12 flex items-center justify-center rounded-full bg-blue-100 text-blue-600 mr-4">
+                            <i class="fas fa-industry text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">国内生产概况</h3>
+                            <p class="text-gray-600">
+                                中国磷霉素行业呈现出规模化、规范化和高质量发展的趋势。龙头企业依托强大的技术和资金实力，不断提升产品竞争力和市场占有率。
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-6 shadow-sm">
+                        <h4 class="text-lg font-semibold mb-4">主要生产基地分布</h4>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+                            <div class="p-3 rounded-lg bg-gradient-to-b from-blue-50 to-blue-100">
+                                <i class="fas fa-map-marker-alt text-blue-600 mb-2"></i>
+                                <h5 class="font-medium mb-1">东北地区</h5>
+                                <p class="text-sm text-gray-600">以东北制药为核心</p>
+                            </div>
+                            <div class="p-3 rounded-lg bg-gradient-to-b from-emerald-50 to-emerald-100">
+                                <i class="fas fa-map-marker-alt text-emerald-600 mb-2"></i>
+                                <h5 class="font-medium mb-1">华中地区</h5>
+                                <p class="text-sm text-gray-600">湖北迅达药业为代表</p>
+                            </div>
+                            <div class="p-3 rounded-lg bg-gradient-to-b from-amber-50 to-amber-100">
+                                <i class="fas fa-map-marker-alt text-amber-600 mb-2"></i>
+                                <h5 class="font-medium mb-1">华北地区</h5>
+                                <p class="text-sm text-gray-600">山西仟源集团为代表</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="glass-card p-6 md:p-8 animate-fade-in">
+                    <div class="flex items-start mb-6">
+                        <div class="w-12 h-12 flex items-center justify-center rounded-full bg-indigo-100 text-indigo-600 mr-4">
+                            <i class="fas fa-shield-alt text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">战略储备政策影响</h3>
+                            <p class="text-gray-600">
+                                磷霉素作为重要的抗生素品种，被纳入中国的战略储备体系，其生产和供应受到国家层面的严格监管和保障。
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-6 shadow-sm">
+                        <h4 class="text-lg font-semibold mb-4">战略储备政策的多重影响</h4>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="w-8 h-8 flex items-center justify-center rounded-full bg-indigo-100 text-indigo-600 mr-3 shrink-0">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <p class="text-gray-600 text-sm">为磷霉素产业提供了稳定的政策环境和市场需求，减少市场波动带来的不确定性</p>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="w-8 h-8 flex items-center justify-center rounded-full bg-indigo-100 text-indigo-600 mr-3 shrink-0">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <p class="text-gray-600 text-sm">战略储备政策鼓励企业进行技术升级和产能扩张，以满足潜在的应急需求</p>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="w-8 h-8 flex items-center justify-center rounded-full bg-indigo-100 text-indigo-600 mr-3 shrink-0">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <p class="text-gray-600 text-sm">战略储备与日常商业销售相结合的模式，为企业提供了多元化的收入来源和市场渠道</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="glass-card p-6 md:p-8 animate-fade-in">
+                <div class="flex items-start mb-6">
+                    <div class="w-12 h-12 flex items-center justify-center rounded-full bg-purple-100 text-purple-600 mr-4">
+                        <i class="fas fa-tasks text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">多层次储备体系</h3>
+                        <p class="text-gray-600">
+                            中国采取了多层次、多渠道的磷霉素储备体系，既保证了应急需求，又避免了资源浪费。
+                        </p>
+                    </div>
+                </div>
+                
+                <div id="reserveSystemChart" class="w-full h-80"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 参与磷霉素生产的厂商分析 -->
+    <section id="manufacturers" class="py-20 bg-gradient-to-b from-sky-50 to-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 animate-fade-in">
+                <h2 class="text-3xl font-bold mb-4">参与磷霉素生产的厂商分析</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-sky-400 to-blue-600 mx-auto"></div>
+                <p class="text-gray-600 mt-4 max-w-3xl mx-auto">
+                    全球磷霉素市场经过多年发展，已形成相对稳定且集中的竞争格局
+                </p>
+            </div>
+
+            <div class="glass-card p-6 md:p-8 mb-8 animate-fade-in">
+                <div class="flex items-start mb-6">
+                    <div class="w-12 h-12 flex items-center justify-center rounded-full bg-sky-100 text-sky-600 mr-4">
+                        <i class="fas fa-building text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">主要厂商概览</h3>
+                        <p class="text-gray-600">
+                            中国磷霉素行业内主要企业包括东北制药、湖北迅达药业、湖南华纳大药厂、山西仟源医药等，国际厂商包括Shinpoong Pharm、Interquim、Ercros和Hwasun pharma等。
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="chart-container">
+                    <canvas id="marketSharePieChart"></canvas>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+                <div class="glass-card p-6 md:p-8 animate-fade-in">
+                    <div class="flex items-center mb-6">
+                        <i class="fas fa-award text-2xl text-amber-500 mr-4"></i>
+                        <h3 class="text-xl font-semibold">东北制药集团</h3>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div class="p-4 bg-white rounded-lg shadow-sm">
+                            <h4 class="font-medium text-gray-800 mb-2">公司概况</h4>
+                            <p class="text-gray-600 text-sm">
+                                始建于1946年，是中国磷霉素行业领军企业，拥有化学原料药、化学制剂、医药商业、医药工程、生物医药等主要业务板块。
+                            </p>
+                        </div>
+                        
+                        <div class="p-4 bg-white rounded-lg shadow-sm">
+                            <h4 class="font-medium text-gray-800 mb-2">核心竞争优势</h4>
+                            <ul class="text-gray-600 text-sm space-y-2">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-0.5 mr-2"></i>
+                                    <span>产品线齐全，涵盖磷霉素系列、维生素C系列等多种产品</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-0.5 mr-2"></i>
+                                    <span>技术实力雄厚，是国家大宗原料药和医药中间体智能制造示范工厂</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-0.5 mr-2"></i>
+                                    <span>市场网络完善，产品覆盖国内外市场</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="glass-card p-6 md:p-8 animate-fade-in">
+                    <div class="flex items-center mb-6">
+                        <i class="fas fa-medal text-2xl text-blue-500 mr-4"></i>
+                        <h3 class="text-xl font-semibold">湖北迅达药业</h3>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div class="p-4 bg-white rounded-lg shadow-sm">
+                            <h4 class="font-medium text-gray-800 mb-2">公司概况</h4>
+                            <p class="text-gray-600 text-sm">
+                                专业从事医药原料药及中间体生产经营的国家重点高新技术企业，产品涵盖消炎镇痛、抗生素、心血管等三大类。
+                            </p>
+                        </div>
+                        
+                        <div class="p-4 bg-white rounded-lg shadow-sm">
+                            <h4 class="font-medium text-gray-800 mb-2">特点与优势</h4>
+                            <ul class="text-gray-600 text-sm space-y-2">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-0.5 mr-2"></i>
+                                    <span>国际化布局，产品远销40多个国家和地区</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-0.5 mr-2"></i>
+                                    <span>在磷霉素钙产品上具有较强的市场竞争力</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-0.5 mr-2"></i>
+                                    <span>持续的技术创新能力和生产工艺优化</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="glass-card p-6 md:p-8 animate-fade-in">
+                <div class="flex items-start mb-6">
+                    <div class="w-12 h-12 flex items-center justify-center rounded-full bg-violet-100 text-violet-600 mr-4">
+                        <i class="fas fa-chart-line text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">竞争格局与发展趋势</h3>
+                        <p class="text-gray-600">
+                            磷霉素行业呈现出"一超多强"的竞争格局，东北制药凭借其全产业链优势、技术实力和市场网络，处于行业领导地位。
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="p-4 border border-violet-100 rounded-lg bg-white shadow-sm">
+                        <div class="w-12 h-12 flex items-center justify-center rounded-full bg-violet-100 text-violet-600 mb-4">
+                            <i class="fas fa-project-diagram text-lg"></i>
+                        </div>
+                        <h4 class="font-medium text-gray-800 mb-2">行业整合趋势</h4>
+                        <p class="text-gray-600 text-sm">
+                            行业内经过多年洗牌，生产厂商不超过5家，市场集中度持续提高，龙头企业优势明显。
+                        </p>
+                    </div>
+                    
+                    <div class="p-4 border border-blue-100 rounded-lg bg-white shadow-sm">
+                        <div class="w-12 h-12 flex items-center justify-center rounded-full bg-blue-100 text-blue-600 mb-4">
+                            <i class="fas fa-cogs text-lg"></i>
+                        </div>
+                        <h4 class="font-medium text-gray-800 mb-2">技术创新</h4>
+                        <p class="text-gray-600 text-sm">
+                            龙头企业持续加大研发投入，提升生产工艺和产品质量，形成技术壁垒和差异化优势。
+                        </p>
+                    </div>
+                    
+                    <div class="p-4 border border-emerald-100 rounded-lg bg-white shadow-sm">
+                        <div class="w-12 h-12 flex items-center justify-center rounded-full bg-emerald-100 text-emerald-600 mb-4">
+                            <i class="fas fa-globe text-lg"></i>
+                        </div>
+                        <h4 class="font-medium text-gray-800 mb-2">国际化布局</h4>
+                        <p class="text-gray-600 text-sm">
+                            企业加速国际市场拓展，通过出口和合作，扩大全球影响力，分散市场风险。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 抵御市场危机的策略 -->
+    <section id="risk-strategies" class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 animate-fade-in">
+                <h2 class="text-3xl font-bold mb-4">抵御市场危机的策略</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-sky-400 to-blue-600 mx-auto"></div>
+                <p class="text-gray-600 mt-4 max-w-3xl mx-auto">
+                    面对上游供应链风险、海外市场需求波动和竞争加剧等多重挑战，磷霉素企业需要采取有效的风险应对策略
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
+                <div class="glass-card p-6 animate-fade-in">
+                    <div class="w-12 h-12 flex items-center justify-center rounded-full bg-red-100 text-red-600 mb-4">
+                        <i class="fas fa-link text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-3">上游供应链风险管理</h3>
+                    <p class="text-gray-600 text-sm mb-4">
+                        针对左磷右胺盐供应集中的风险，磷霉素生产商需要构建多元化的供应链体系。
+                    </p>
+                    <ul class="text-gray-600 text-sm space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-shield-alt text-red-500 mt-0.5 mr-2"></i>
+                            <span>建立供应商多元化战略，与多家供应商建立合作</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-shield-alt text-red-500 mt-0.5 mr-2"></i>
+                            <span>建立原材料库存预警机制和应急响应体系</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-shield-alt text-red-500 mt-0.5 mr-2"></i>
+                            <span>签订长期供应协议，锁定原材料供应和价格</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-shield-alt text-red-500 mt-0.5 mr-2"></i>
+                            <span>加大技术研发，探索替代原料路径</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="glass-card p-6 animate-fade-in">
+                    <div class="w-12 h-12 flex items-center justify-center rounded-full bg-amber-100 text-amber-600 mb-4">
+                        <i class="fas fa-globe-americas text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-3">海外市场需求波动应对</h3>
+                    <p class="text-gray-600 text-sm mb-4">
+                        面对阿根廷、墨西哥等非法规市场，以及约旦、叙利亚等人用药市场的波动风险。
+                    </p>
+                    <ul class="text-gray-600 text-sm space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-shield-alt text-amber-500 mt-0.5 mr-2"></i>
+                            <span>多元化出口市场布局，分散单一市场风险</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-shield-alt text-amber-500 mt-0.5 mr-2"></i>
+                            <span>深入研究目标市场政策变化，及时调整策略</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-shield-alt text-amber-500 mt-0.5 mr-2"></i>
+                            <span>产品结构调整与本地化适应，满足不同市场需求</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-shield-alt text-amber-500 mt-0.5 mr-2"></i>
+                            <span>建立国际市场风险预警机制，评估政治经济风险</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="glass-card p-6 animate-fade-in">
+                    <div class="w-12 h-12 flex items-center justify-center rounded-full bg-emerald-100 text-emerald-600 mb-4">
+                        <i class="fas fa-chess text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-3">竞争加剧的应对策略</h3>
+                    <p class="text-gray-600 text-sm mb-4">
+                        随着磷霉素行业的整合和集中度提高，市场竞争日益激烈，需要构建可持续的竞争优势。
+                    </p>
+                    <ul class="text-gray-600 text-sm space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-shield-alt text-emerald-500 mt-0.5 mr-2"></i>
+                            <span>技术壁垒构建与专利保护，形成技术领先优势</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-shield-alt text-emerald-500 mt-0.5 mr-2"></i>
+                            <span>成本控制与规模效应最大化，提高盈利能力</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-shield-alt text-emerald-500 mt-0.5 mr-2"></i>
+                            <span>差异化竞争与品牌建设，打造独特市场形象</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-shield-alt text-emerald-500 mt-0.5 mr-2"></i>
+                            <span>产业链垂直整合，增强对供应链的控制力</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="glass-card p-6 md:p-8 animate-fade-in">
+                <div class="flex items-start mb-6">
+                    <div class="w-12 h-12 flex items-center justify-center rounded-full bg-indigo-100 text-indigo-600 mr-4">
+                        <i class="fas fa-shield-alt text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">综合风险应对框架</h3>
+                        <p class="text-gray-600">
+                            成功的风险管理需要兼顾市场波动、供应链安全和竞争格局变化，构建立体化的应对体系。
+                        </p>
+                    </div>
+                </div>
+                
+                <div id="riskManagementRadarChart" class="w-full h-80"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 扩展销售市场的可能性 -->
+    <section id="market-expansion" class="py-20 bg-gradient-to-b from-sky-50 to-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 animate-fade-in">
+                <h2 class="text-3xl font-bold mb-4">扩展销售市场的可能性</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-sky-400 to-blue-600 mx-auto"></div>
+                <p class="text-gray-600 mt-4 max-w-3xl mx-auto">
+                    除了在现有市场的深度开发外，磷霉素企业还可以积极探索新的应用领域，寻找新的增长点
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+                <div class="glass-card p-6 md:p-8 animate-fade-in">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 flex items-center justify-center rounded-full bg-blue-100 text-blue-600 mr-4">
+                            <i class="fas fa-search-plus text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">现有市场的深度开发</h3>
+                    </div>
+                    
+                    <div class="space-y-5">
+                        <div class="p-4 bg-white rounded-lg shadow-sm">
+                            <div class="flex items-center mb-2">
+                                <i class="fas fa-hospital-user text-blue-500 mr-2"></i>
+                                <h4 class="font-medium text-gray-800">人用药市场</h4>
+                            </div>
+                            <p class="text-gray-600 text-sm">
+                                磷霉素抗菌谱广、安全性高，对抗耐药菌优势明显。通过学术推广、临床试验、医生教育等提高临床使用率，针对特定疾病开发专门方案。
+                            </p>
+                        </div>
+                        
+                        <div class="p-4 bg-white rounded-lg shadow-sm">
+                            <div class="flex items-center mb-2">
+                                <i class="fas fa-paw text-blue-500 mr-2"></i>
+                                <h4 class="font-medium text-gray-800">兽药市场</h4>
+                            </div>
+                            <p class="text-gray-600 text-sm">
+                                与大型养殖场、兽医诊所、饲料企业建立战略合作，提供动物健康管理解决方案，根据动物种类和养殖环境开发针对性产品。
+                            </p>
+                        </div>
+                        
+                        <div class="p-4 bg-white rounded-lg shadow-sm">
+                            <div class="flex items-center mb-2">
+                                <i class="fas fa-map-marked-alt text-blue-500 mr-2"></i>
+                                <h4 class="font-medium text-gray-800">区域市场深耕</h4>
+                            </div>
+                            <p class="text-gray-600 text-sm">
+                                针对亚太地区62.39%的市场份额，进一步细分市场，根据不同区域特点制定差异化策略，提高资源利用效率和市场渗透率。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="glass-card p-6 md:p-8 animate-fade-in">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 flex items-center justify-center rounded-full bg-green-100 text-green-600 mr-4">
+                            <i class="fas fa-flask text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">新应用领域的探索</h3>
+                    </div>
+                    
+                    <div class="space-y-5">
+                        <div class="p-4 bg-white rounded-lg shadow-sm">
+                            <div class="flex items-center mb-2">
+                                <i class="fas fa-vial text-green-500 mr-2"></i>
+                                <h4 class="font-medium text-gray-800">组合用药新适应症</h4>
+                            </div>
+                            <p class="text-gray-600 text-sm">
+                                磷霉素可与其他抗菌药物联用抵抗耐药菌，协同效果显著。研究磷霉素与其他抗生素联合用药方案，开发针对多重耐药菌的新型治疗方案。
+                            </p>
+                        </div>
+                        
+                        <div class="p-4 bg-white rounded-lg shadow-sm">
+                            <div class="flex items-center mb-2">
+                                <i class="fas fa-capsules text-green-500 mr-2"></i>
+                                <h4 class="font-medium text-gray-800">特殊制剂创新</h4>
+                            </div>
+                            <p class="text-gray-600 text-sm">
+                                开发长效缓释制剂、靶向制剂、特殊人群专用剂型等，提高治疗效果和安全性，获取专利保护，形成技术壁垒。
+                            </p>
+                        </div>
+                        
+                        <div class="p-4 bg-white rounded-lg shadow-sm">
+                            <div class="flex items-center mb-2">
+                                <i class="fas fa-globe-asia text-green-500 mr-2"></i>
+                                <h4 class="font-medium text-gray-800">新兴市场前瞻布局</h4>
+                            </div>
+                            <p class="text-gray-600 text-sm">
+                                关注宠物医疗、水产养殖等新兴领域，开发适用的磷霉素产品；前瞻布局新兴经济体快速增长的医疗市场，抢占先机。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="glass-card p-6 md:p-8 animate-fade-in">
+                <div class="flex items-start mb-6">
+                    <div class="w-12 h-12 flex items-center justify-center rounded-full bg-purple-100 text-purple-600 mr-4">
+                        <i class="fas fa-lightbulb text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">商业模式创新</h3>
+                        <p class="text-gray-600">
+                            磷霉素企业需要进行商业模式创新，构建新的竞争优势和增长动力。
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="p-5 bg-white rounded-lg shadow-sm border border-purple-100">
+                        <div class="w-12 h-12 flex items-center justify-center rounded-full bg-purple-100 text-purple-600 mb-4">
+                            <i class="fas fa-puzzle-piece text-lg"></i>
+                        </div>
+                        <h4 class="font-medium text-gray-800 mb-2">从供应商到解决方案提供商</h4>
+                        <p class="text-gray-600 text-sm">
+                            提供从原料药到制剂、从产品到服务的全方位解决方案，延长价值链，提高产品附加值，增强客户黏性。
+                        </p>
+                    </div>
+                    
+                    <div class="p-5 bg-white rounded-lg shadow-sm border border-purple-100">
+                        <div class="w-12 h-12 flex items-center justify-center rounded-full bg-purple-100 text-purple-600 mb-4">
+                            <i class="fas fa-digital-tachograph text-lg"></i>
+                        </div>
+                        <h4 class="font-medium text-gray-800 mb-2">数字化营销与渠道创新</h4>
+                        <p class="text-gray-600 text-sm">
+                            利用数字技术和平台，实现营销渠道的多元化和精准化，提高营销效率和效果，收集市场数据和用户反馈。
+                        </p>
+                    </div>
+                    
+                    <div class="p-5 bg-white rounded-lg shadow-sm border border-purple-100">
+                        <div class="w-12 h-12 flex items-center justify-center rounded-full bg-purple-100 text-purple-600 mb-4">
+                            <i class="fas fa-handshake text-lg"></i>
+                        </div>
+                        <h4 class="font-medium text-gray-800 mb-2">产业生态构建</h4>
+                        <p class="text-gray-600 text-sm">
+                            与上下游企业、医疗机构、研究机构等建立战略联盟，搭建行业平台，促进信息交流和资源对接，创造多方共赢。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 结论与建议 -->
+    <section class="py-20 bg-gradient-to-b from-white to-sky-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 animate-fade-in">
+                <h2 class="text-3xl font-bold mb-4">结论与建议</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-sky-400 to-blue-600 mx-auto"></div>
+                <p class="text-gray-600 mt-4 max-w-3xl mx-auto">
+                    基于对磷霉素原料药行业的全面分析，为不同参与者提供战略指导和行动建议
+                </p>
+            </div>
+
+            <div class="glass-card p-6 md:p-8 mb-8 animate-fade-in">
+                <div class="flex items-start mb-6">
+                    <div class="w-12 h-12 flex items-center justify-center rounded-full bg-blue-100 text-blue-600 mr-4">
+                        <i class="fas fa-file-alt text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">研究结论总结</h3>
+                        <p class="text-gray-600">
+                            磷霉素原料药行业正处于市场增长稳定、产业集中度提高的阶段，面临多种挑战与机遇。
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="space-y-4">
+                    <div class="p-4 bg-white rounded-lg shadow-sm">
+                        <div class="flex items-center mb-2">
+                            <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                            <h4 class="font-medium text-gray-800">市场格局</h4>
+                        </div>
+                        <p class="text-gray-600 text-sm">
+                            磷霉素市场增长稳定，亚太地区份额达62.39%。行业集中度高，有能力的生产厂商不超过5家，东北制药以70%以上的市场份额处于领导地位。
+                        </p>
+                    </div>
+                    
+                    <div class="p-4 bg-white rounded-lg shadow-sm">
+                        <div class="flex items-center mb-2">
+                            <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                            <h4 class="font-medium text-gray-800">产业链风险</h4>
+                        </div>
+                        <p class="text-gray-600 text-sm">
+                            上游供应链高度集中，左磷右胺盐生产厂家仅有两家，增加了行业风险。企业需要构建多元化供应链体系，加强原材料库存管理。
+                        </p>
+                    </div>
+                    
+                    <div class="p-4 bg-white rounded-lg shadow-sm">
+                        <div class="flex items-center mb-2">
+                            <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                            <h4 class="font-medium text-gray-800">发展机遇</h4>
+                        </div>
+                        <p class="text-gray-600 text-sm">
+                            磷霉素在抗耐药菌、组合用药等领域具有广阔前景。通过新应用领域探索、商业模式创新和产业链整合，企业可实现持续增长。
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="glass-card p-6 md:p-8 mb-8 animate-fade-in">
+                <div class="flex items-start mb-6">
+                    <div class="w-12 h-12 flex items-center justify-center rounded-full bg-green-100 text-green-600 mr-4">
+                        <i class="fas fa-bullseye text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">针对性建议</h3>
+                        <p class="text-gray-600">
+                            根据不同参与者的角色和挑战，提供差异化的战略建议，帮助其在磷霉素行业取得成功。
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="p-5 bg-white rounded-lg shadow-sm">
+                        <div class="flex items-center mb-3">
+                            <div class="w-10 h-10 flex items-center justify-center rounded-full bg-green-100 text-green-600 mr-3">
+                                <i class="fas fa-industry text-lg"></i>
+                            </div>
+                            <h4 class="font-medium text-gray-800">大型磷霉素企业</h4>
+                        </div>
+                        <ul class="text-gray-600 text-sm space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-arrow-right text-green-500 mt-0.5 mr-2"></i>
+                                <span>构建多元化的上游供应链体系，降低单一供应商风险</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-arrow-right text-green-500 mt-0.5 mr-2"></i>
+                                <span>加大研发投入，开发新合成路线和工艺技术</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-arrow-right text-green-500 mt-0.5 mr-2"></i>
+                                <span>推进产业链垂直整合，增强对供应链的控制力</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-arrow-right text-green-500 mt-0.5 mr-2"></i>
+                                <span>实施数字化转型，提高运营效率和决策质量</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="p-5 bg-white rounded-lg shadow-sm">
+                        <div class="flex items-center mb-3">
+                            <div class="w-10 h-10 flex items-center justify-center rounded-full bg-blue-100 text-blue-600 mr-3">
+                                <i class="fas fa-building text-lg"></i>
+                            </div>
+                            <h4 class="font-medium text-gray-800">中小磷霉素企业</h4>
+                        </div>
+                        <ul class="text-gray-600 text-sm space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-arrow-right text-blue-500 mt-0.5 mr-2"></i>
+                                <span>聚焦细分市场和特色产品，寻找差异化竞争优势</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-arrow-right text-blue-500 mt-0.5 mr-2"></i>
+                                <span>加强与龙头企业的战略合作，共享资源和市场</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-arrow-right text-blue-500 mt-0.5 mr-2"></i>
+                                <span>实施精细化管理和成本控制，提高运营效率</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-arrow-right text-blue-500 mt-0.5 mr-2"></i>
+                                <span>寻求资本合作和战略并购，扩大规模和提升实力</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="glass-card p-6 md:p-8 animate-fade-in">
+                <div class="flex items-start mb-6">
+                    <div class="w-12 h-12 flex items-center justify-center rounded-full bg-purple-100 text-purple-600 mr-4">
+                        <i class="fas fa-binoculars text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">未来展望</h3>
+                        <p class="text-gray-600">
+                            磷霉素原料药行业将呈现出市场集中度提高、技术创新加速、国际化深入等多重发展趋势。
+                        </p>
+                    </div>
+                </div>
+                
+                <div id="futureOutlookChart" class="w-full h-80"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚信息 -->
+    <div class="py-6 bg-gray-50 border-t border-gray-200">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-gray-600 text-sm">
+                本报告由沈阳星恺科技生成 <a href="https://wenxiaobai.com" class="text-sky-600 hover:underline">newcathayone.com</a>
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // 移动端菜单切换
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+        
+        // 滚动动画
+        function handleScrollAnimations() {
+            const elements = document.querySelectorAll('.animate-fade-in');
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                if (elementTop < windowHeight * 0.9) {
+                    element.classList.add('visible');
+                }
+            });
+        }
+        
+        window.addEventListener('scroll', handleScrollAnimations);
+        window.addEventListener('load', handleScrollAnimations);
+        
+        // 市场份额饼图
+        function initMarketShareChart() {
+            const ctx = document.getElementById('marketShareChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'pie',
+                data: {
+                    labels: ['亚太地区', '北美地区', '欧洲地区', '其他地区'],
+                    datasets: [{
+                        label: '2022年磷霉素市场份额',
+                        data: [62.39, 18.41, 12.2, 7],
+                        backgroundColor: [
+                            'rgba(14, 165, 233, 0.7)',
+                            'rgba(79, 70, 229, 0.7)',
+                            'rgba(59, 130, 246, 0.7)',
+                            'rgba(99, 102, 241, 0.7)'
+                        ],
+                        borderColor: [
+                            'rgba(14, 165, 233, 1)',
+                            'rgba(79, 70, 229, 1)',
+                            'rgba(59, 130, 246, 1)',
+                            'rgba(99, 102, 241, 1)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom'
+                        },
+                        title: {
+                            display: true,
+                            text: '2022年全球磷霉素市场份额分布',
+                            font: {
+                                size: 14
+                            }
+                        }
+                    }
+                }
+            });
+        }
+        
+        // 产品类型图表
+        function initProductTypeChart() {
+            const ctx = document.getElementById('productTypeChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['磷霉素钠', '磷霉素钙', '磷霉素氨丁三醇', '磷霉素左磷右胺盐'],
+                    datasets: [{
+                        label: '相对市场份额',
+                        data: [40, 25, 20, 15],
+                        backgroundColor: [
+                            'rgba(14, 165, 233, 0.7)',
+                            'rgba(59, 130, 246, 0.7)',
+                            'rgba(99, 102, 241, 0.7)',
+                            'rgba(79, 70, 229, 0.7)'
+                        ],
+                        borderColor: [
+                            'rgba(14, 165, 233, 1)',
+                            'rgba(59, 130, 246, 1)',
+                            'rgba(99, 102, 241, 1)',
+                            'rgba(79, 70, 229, 1)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        title: {
+                            display: true,
+                            text: '磷霉素产品类型市场分布',
+                            font: {
+                                size: 14
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: '相对市场份额 (%)'
+                            }
+                        }
+                    }
+                }
+            });
+        }
+        
+        // 市场份额饼图
+        function initMarketSharePieChart() {
+            const ctx = document.getElementById('marketSharePieChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['东北制药', '湖北迅达药业', '山西仟源医药', '湖南华纳大药厂', '其他厂商'],
+                    datasets: [{
+                        data: [70, 12, 8, 6, 4],
+                        backgroundColor: [
+                            'rgba(14, 165, 233, 0.7)',
+                            'rgba(59, 130, 246, 0.7)',
+                            'rgba(99, 102, 241, 0.7)',
+                            'rgba(79, 70, 229, 0.7)',
+                            'rgba(124, 58, 237, 0.7)'
+                        ],
+                        borderColor: [
+                            'rgba(14, 165, 233, 1)',
+                            'rgba(59, 130, 246, 1)',
+                            'rgba(99, 102, 241, 1)',
+                            'rgba(79, 70, 229, 1)',
+                            'rgba(124, 58, 237, 1)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom'
+                        },
+                        title: {
+                            display: true,
+                            text: '中国磷霉素市场主要厂商份额',
+                            font: {
+                                size: 14
+                            }
+                        }
+                    }
+                }
+            });
+        }
+        
+        // 储备体系图表
+        function initReserveSystemChart() {
+            const options = {
+                series: [{
+                    name: '储备级别',
+                    data: [90, 75, 60]
+                }],
+                chart: {
+                    height: 320,
+                    type: 'radar',
+                    toolbar: {
+                        show: false
+                    }
+                },
+                colors: ['#0ea5e9'],
+                xaxis: {
+                    categories: ['国家级战略储备', '省级区域储备', '企业商业储备']
+                },
+                yaxis: {
+                    show: false,
+                },
+                title: {
+                    text: '中国磷霉素多层次储备体系',
+                    align: 'center',
+                    style: {
+                        fontSize: '14px',
+                        fontFamily: 'Noto Sans SC'
+                    }
+                },
+                stroke: {
+                    width: 2
+                },
+                fill: {
+                    opacity: 0.2
+                },
+                markers: {
+                    size: 5,
+                    hover: {
+                        size: 7
+                    }
+                }
+            };
+
+            const chart = new ApexCharts(document.querySelector("#reserveSystemChart"), options);
+            chart.render();
+        }
+        
+        // 风险管理雷达图
+        function initRiskManagementRadarChart() {
+            const options = {
+                series: [{
+                    name: '风险管理能力',
+                    data: [80, 65, 75, 85, 70]
+                }],
+                chart: {
+                    height: 320,
+                    type: 'radar',
+                    toolbar: {
+                        show: false
+                    }
+                },
+                colors: ['#7c3aed'],
+                xaxis: {
+                    categories: ['供应链管理', '市场多元化', '技术壁垒', '成本控制', '产品差异化']
+                },
+                yaxis: {
+                    show: false,
+                },
+                title: {
+                    text: '磷霉素企业风险管理关键维度',
+                    align: 'center',
+                    style: {
+                        fontSize: '14px',
+                        fontFamily: 'Noto Sans SC'
+                    }
+                },
+                stroke: {
+                    width: 2
+                },
+                fill: {
+                    opacity: 0.2
+                },
+                markers: {
+                    size: 5,
+                    hover: {
+                        size: 7
+                    }
+                }
+            };
+
+            const chart = new ApexCharts(document.querySelector("#riskManagementRadarChart"), options);
+            chart.render();
+        }
+        
+        // 未来展望图表
+        function initFutureOutlookChart() {
+            const options = {
+                series: [{
+                    name: '发展趋势',
+                    data: [75, 85, 80, 90, 70, 65]
+                }],
+                chart: {
+                    height: 320,
+                    type: 'radar',
+                    toolbar: {
+                        show: false
+                    }
+                },
+                colors: ['#8b5cf6'],
+                xaxis: {
+                    categories: ['市场集中度提高', '技术创新加速', '国际化深入', '数字化转型', '可持续发展', '产业链整合']
+                },
+                yaxis: {
+                    show: false,
+                },
+                title: {
+                    text: '磷霉素行业未来发展趋势',
+                    align: 'center',
+                    style: {
+                        fontSize: '14px',
+                        fontFamily: 'Noto Sans SC'
+                    }
+                },
+                stroke: {
+                    width: 2
+                },
+                fill: {
+                    opacity: 0.2
+                },
+                markers: {
+                    size: 5,
+                    hover: {
+                        size: 7
+                    }
+                }
+            };
+
+            const chart = new ApexCharts(document.querySelector("#futureOutlookChart"), options);
+            chart.render();
+        }
+        
+        // 初始化所有图表
+        document.addEventListener('DOMContentLoaded', () => {
+            initMarketShareChart();
+            initProductTypeChart();
+            initMarketSharePieChart();
+            initReserveSystemChart();
+            initRiskManagementRadarChart();
+            initFutureOutlookChart();
+        });
+    </script>
+</body>
+</html>
